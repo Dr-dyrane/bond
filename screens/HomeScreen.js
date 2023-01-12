@@ -39,8 +39,8 @@ const DUMMY_DATA = [
     id: 123,
   },
   {
-    firstName: "English",
     lastName: "Melody",
+    firstName: "English",
     occupation: "Farmer",
     photoURL:
       "https://images.pexels.com/photos/14296202/pexels-photo-14296202.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
@@ -143,9 +143,15 @@ const HomeScreen = () => {
     setDoc(doc(db, "users", user.uid, "passes", userSwiped.id), userSwiped);
   };
   const swipeRight = async (cardIndex) => {
+    
     if (!profiles[cardIndex]) return;
+    
     const userSwiped = profiles[cardIndex];
-    const loggedInProfile = await (await getDoc(db, "users", user.uid)).data();
+    
+    const loggedInProfile = await (
+      await getDoc(doc(db, "users", user.uid))
+      ).data();
+    
     getDoc(doc(db, "users", userSwiped.id, "swipes", user.uid)).then(
       (documentSnapshot) => {
         if (documentSnapshot.exists()) {
