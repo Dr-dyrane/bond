@@ -311,7 +311,7 @@ export default HomeScreen;
 
 const styles = StyleSheet.create({
   cardShadow: {
-    shadowColor: "",
+    shadowColor: "#000",
     shadowOffset: {
       width: 0,
       height: 0,

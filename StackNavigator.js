@@ -1,6 +1,7 @@
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import HomeScreen from "./screens/HomeScreen";
 import ChatScreen from "./screens/ChatScreen";
+import MessageScreen from "./screens/MessageScreen";
 import LoginScreen from "./screens/LoginScreen";
 import ModalScreen from "./screens/ModalScreen";
 import MatchedScreen from "./screens/MatchedScreen";
@@ -23,6 +24,7 @@ const StackNavigator = () => {
           <Stack.Group>
             <Stack.Screen name="Home" component={HomeScreen} />
             <Stack.Screen name="Chat" component={ChatScreen} />
+            <Stack.Screen name="Message" component={MessageScreen} />
           </Stack.Group>
           <Stack.Group
             screenOptions={{

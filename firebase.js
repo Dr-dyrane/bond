@@ -12,7 +12,7 @@ import {
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  databaseURL: "https://bond-8666f.nam5.firebaseio.com",
+  databaseURL: "https://bond-8666f.firebaseio.com",
   apiKey: "AIzaSyDj3K-nWL1F4Mu4fkmiqeacVrHh9u8tF1k",
   authDomain: "bond-8666f.firebaseapp.com",
   projectId: "bond-8666f",
